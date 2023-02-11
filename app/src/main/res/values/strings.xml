@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Exercise3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="oggi">Oggi</string>
+    <string name="domani">Domani</string>
+    <string name="cerca">Cerca</string>
+    <string name="your_name_is">Your name is..</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="button">Button</string>
+</resources>
