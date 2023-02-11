@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#C4C4C4">
+
+
+    <ImageView
+        android:id="@+id/iv_moon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="102dp"
+        app:srcCompat="@drawable/moon" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="00:00"
+        android:textColor="#230EA5"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/gradi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:text="14°"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/goccia"
+        android:layout_width="20dp"
+        android:layout_height="22dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="253dp"
+        android:layout_marginTop="3dp"
+        app:srcCompat="@drawable/goccia" />
+
+    <TextView
+        android:id="@+id/percentuale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="275dp"
+        android:text="80%"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="24dp"
+        android:background="#ABA4FF" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="342dp"
+        android:layout_height="213dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="16dp"
+        android:visibility="visible"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Percepita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="18dp"
+                android:text="Percepita"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/gradi12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="38dp"
+                android:text="12°"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/indice_uv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="198dp"
+                android:layout_marginTop="18dp"
+                android:text="Indice UV"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="198dp"
+                android:layout_marginTop="37dp"
+                android:text="1/10"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginRight="20dp"
+                android:background="#ABA4FF" />
+
+            <TextView
+                android:id="@+id/umidità"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="84dp"
+                android:text="Umidità"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/vento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="198dp"
+                android:layout_marginTop="84dp"
+                android:text="Vento"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/percentuale2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="106dp"
+                android:text="80%"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/NNE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NNE 1km/h"
+                android:layout_marginTop="106dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginLeft="198dp"/>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="139dp"
+                android:layout_marginRight="20dp"
+                android:background="#ABA4FF" />
+
+            <TextView
+                android:id="@+id/copertura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Copertura"
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="153dp"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/percentuale3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3%"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="175dp" />
+
+            <TextView
+                android:id="@+id/pioggia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="153dp"
+                android:layout_marginLeft="200dp"
+                android:textSize="15sp"
+                android:text="Pioggia" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="0cm"
+                android:layout_marginTop="175dp"
+                android:layout_marginLeft="200dp"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
