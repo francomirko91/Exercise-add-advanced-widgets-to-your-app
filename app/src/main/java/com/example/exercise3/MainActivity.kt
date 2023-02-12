@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         replaceFragment(Fragment())
+        replaceFragmentDomani(Fragment())
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
         val navController = findNavController(R.id.fragment)
@@ -23,6 +24,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun replaceFragment(fragment: Fragment) {
+
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fragment,fragment)
+        fragmentTransaction.commit()
+    }
+
+    private fun replaceFragmentDomani(fragment: Fragment) {
 
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()

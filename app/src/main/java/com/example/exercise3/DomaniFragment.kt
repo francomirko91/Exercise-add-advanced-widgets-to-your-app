@@ -5,55 +5,99 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [DomaniFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class DomaniFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var adapter: DomaniViewHolder.DomaniAdapter
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var domaniList: ArrayList<Domani>
+    lateinit var ora: Array<String>
+    lateinit var image: Array<Int>
+    lateinit var gradi: Array<String>
+    lateinit var image2: Array<Int>
+    lateinit var percentuale: Array<String>
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_domani, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment DomaniFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            DomaniFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        dataInitialize()
+        val layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        recyclerView = view.findViewById(R.id.domani_Recycler_View)
+        recyclerView.layoutManager = layoutManager
+        adapter = DomaniViewHolder.DomaniAdapter(domaniList)
+        recyclerView.adapter = adapter
+    }
+
+
+    private fun dataInitialize() {
+        domaniList = ArrayList()
+
+        ora = arrayOf(
+            "00.00",
+            "01.00",
+            "02.00",
+            "03.00",
+            "04.00",
+            "05.00",
+            "06.00",
+        )
+
+        image = arrayOf(
+            R.drawable.moon,
+            R.drawable.moon,
+            R.drawable.moon,
+            R.drawable.moon,
+            R.drawable.moon,
+            R.drawable.moon,
+            R.drawable.moon,
+        )
+
+        gradi = arrayOf(
+            "14°",
+            "15°",
+            "16°",
+            "16°",
+            "16°",
+            "17°",
+            "17°",
+        )
+
+        image2 = arrayOf(
+            R.drawable.goccia,
+            R.drawable.goccia,
+            R.drawable.goccia,
+            R.drawable.goccia,
+            R.drawable.goccia,
+            R.drawable.goccia,
+            R.drawable.goccia,
+
+        )
+
+        percentuale = arrayOf(
+            "80%",
+            "50%",
+            "52%",
+            "46%",
+            "49%",
+            "55%",
+            "50%",
+        )
+
+        for (i in image.indices) {
+            val domani = Domani(ora[i], image[i],gradi[i],image2[i],percentuale[i])
+            domaniList.add(domani)
+        }
+
+
     }
 }
