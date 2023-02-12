@@ -5,5 +5,7 @@ data class Domani(
     var image: Int,
     var gradi: String,
     var image2: Int,
-    var percentuale: String
+    var percentuale: String,
+    var percepita: String,
+    var visibility: Boolean = false
 )

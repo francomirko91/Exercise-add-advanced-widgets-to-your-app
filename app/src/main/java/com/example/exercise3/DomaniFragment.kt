@@ -18,6 +18,7 @@ class DomaniFragment : Fragment() {
     lateinit var gradi: Array<String>
     lateinit var image2: Array<Int>
     lateinit var percentuale: Array<String>
+    lateinit var percepita: Array<String>
 
 
 
@@ -93,8 +94,18 @@ class DomaniFragment : Fragment() {
             "50%",
         )
 
+        percepita = arrayOf(
+            "Percepita",
+            "Percepita",
+            "Percepita",
+            "Percepita",
+            "Percepita",
+            "Percepita",
+            "Percepita",
+        )
+
         for (i in image.indices) {
-            val domani = Domani(ora[i], image[i],gradi[i],image2[i],percentuale[i])
+            val domani = Domani(ora[i], image[i],gradi[i],image2[i],percentuale[i],percepita[i])
             domaniList.add(domani)
         }
 
