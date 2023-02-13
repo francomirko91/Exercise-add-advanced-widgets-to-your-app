@@ -7,5 +7,4 @@ data class Domani(
     var image2: Int,
     var percentuale: String,
     var percepita: String,
-    var visibility: Boolean = false
-)
+    var visibility: Boolean = false)
